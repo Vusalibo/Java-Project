@@ -1,0 +1,168 @@
+import java.util.Scanner;
+
+public class Main {
+    public static String prev="";
+    public static void main(String[] args)
+    {
+        /*Scanner s1=new Scanner(System.in);
+        String str2;
+        while (true)
+        {
+            str2=s1.nextLine();
+            if (str2.equals("99999"))
+            {break;}
+            System.out.println(direction(str2) + str2.substring(2,5));
+        }*/
+
+        /*Scanner s1=new Scanner(System.in);
+        int x,y;
+        x= s1.nextInt();
+        y=s1.nextInt();
+        sumfun(x,y);*/
+
+        /*Scanner s1=new Scanner(System.in);
+        int x,y;
+        x= s1.nextInt();
+        y=s1.nextInt();
+        subfun(x,y);*/
+
+        /*Scanner s1=new Scanner(System.in);
+        int x,y;
+        x= s1.nextInt();
+        y=s1.nextInt();
+        sumfun(x,y);
+        subfun(x,y);*/
+
+        /*Scanner s1=new Scanner(System.in);
+        int x,y;
+        x= s1.nextInt();
+        y=s1.nextInt();
+        sumfun(x,y);
+        subfun(x,y);
+        mlfun(x,y);*/
+
+        /*Scanner s1=new Scanner(System.in);
+        int x,y;
+        x= s1.nextInt();
+        y=s1.nextInt();
+        sumfun(x,y);
+        subfun(x,y);
+        mlfun(x,y);
+        dvfun(x,y);*/
+
+        /*Scanner s1=new Scanner(System.in);
+        int x;
+        x= s1.nextInt();
+        fcfun(x);*/
+
+        /*Scanner s1=new Scanner(System.in);
+        int x,y;
+        x= s1.nextInt();
+        y=s1.nextInt();
+        pow(x,y);*/
+
+        Scanner s1=new Scanner(System.in);
+        int x,y,n;
+        x= s1.nextInt();
+        n= s1.nextInt();
+        double sum=1;
+        for(int i=1; i<=n; i++)
+        { System.out.println(sum);
+            sum= sum+ (power(x,i)/factfun(i));
+        }
+        System.out.println("Sum = "+sum);
+
+        /*Scanner s1=new Scanner(System.in);
+        int x,y,n;
+        x= s1.nextInt();
+        n= s1.nextInt();
+        double sum=1;
+        for(int i=1; i<=n; i++)
+        { System.out.println(sum);
+            sum= sum - (power(x,i)/factfun(i));
+
+        }
+        System.out.println("Sum = "+sum);*/
+
+
+
+
+
+    }
+    public static void sumfun(int num1, int num2){
+        int sum;
+        sum=num1+num2;
+        System.out.println("Sum= "+ sum);
+    }
+    public static void subfun(int num1, int num2) {
+        int sub;
+        sub = num1 - num2;
+        System.out.println("Sub= " + sub);
+    }
+    public static void mlfun(int num1, int num2) {
+        int ml;
+        ml = num1 * num2;
+        System.out.println("Answer is= " + ml);
+    }
+
+    public static void dvfun(int num1, int num2) {
+        double dv;
+        dv =(double) num1 / num2;
+        System.out.println("Division is= " + dv);
+    }
+    public static void fcfun(int num1) {
+        int fc;
+        int fact=1;
+        for(int i=1;i<=num1;i++)
+        {
+            fact=fact*i;
+        };
+        System.out.println("Factorial is= " + fact);
+    }
+
+    public static void pow(int num1, int num2) {
+        int pow=1;
+        int i;
+        for(i=1; i<=num2; i++)
+        {
+            pow=pow*num2;
+        }
+        System.out.println("Answer is= " + pow);
+    }
+    public static double power(int num1, int num2) {
+        double p=1;
+        int i;
+        for(i=1; i<=num2; i++)
+        {
+            p=p*num1;
+        }
+        return p;
+    }
+    public static int factfun(int num1) {
+        int fact = 1;
+        for (int i = 1; i <= num1; i++)
+        {
+            fact = fact * i;
+        }
+        return fact;
+    }
+    public static String direction(String str)
+    {
+        String num=str.substring(0,2);
+        int sum=Integer.parseInt(num.substring(0,1))+Integer.parseInt(num.substring(1));
+                if (sum==0)
+                {
+                    return prev;
+                }
+                else if (sum%2==0)
+                {
+                    prev = "right";
+                    return "right";
+                }
+                else
+                {
+                    prev = "left";
+                    return "left";
+                }
+    }
+}
